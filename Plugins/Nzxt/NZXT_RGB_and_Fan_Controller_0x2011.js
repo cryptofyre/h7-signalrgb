@@ -2,7 +2,7 @@ export function Name() { return "NZXT RGB and Fan Controller v2"; }
 export function VendorId() { return 0x1E71; }
 export function Documentation(){ return "troubleshooting/nzxt"; }
 export function ProductId() { return 0x2011; }
-export function Publisher() { return "WhirlwindFX"; }
+export function Publisher() { return "WhirlwindFX & cryptofyre"; }
 export function Size() { return [1, 1]; }
 export function DefaultPosition(){return [0, 0];}
 export function DefaultScale(){return 1.0;}
