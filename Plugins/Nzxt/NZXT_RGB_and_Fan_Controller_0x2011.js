@@ -81,7 +81,7 @@ function RequestFirmware(){
 }
 
 export function Shutdown() {
-	for(var i = 0; i <= 5; i++) {
+	for(let i = 0; i <= ChannelArray.length; i++) {
 		SendChannel(i, true);
 	}
 }
@@ -229,7 +229,7 @@ function SetFanState(FanId, PercentDuty){
 }
 export function Render() {
 	ReadAllPackets();
-	for(var i = 0; i <= 5; i++) {
+	for(let i = 0; i <= ChannelArray.length; i++) {
 		SendChannel(i);
 	}
 }
