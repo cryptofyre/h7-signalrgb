@@ -81,13 +81,9 @@ function RequestFirmware(){
 }
 
 export function Shutdown() {
-	SendChannel(0, true);
-	SendChannel(1, true);
-	SendChannel(2, true);
-	SendChannel(3, true);
-	SendChannel(4, true);
-	SendChannel(5, true);
-
+	for(let i = 0; i <= ChannelArray.length; i++) {
+		SendChannel(i, true);
+	}
 }
 
 function StreamLightingPacketChanneled(packetNumber, count, data, channel) {
@@ -232,16 +228,10 @@ function SetFanState(FanId, PercentDuty){
 
 }
 export function Render() {
-
 	ReadAllPackets();
-
-	SendChannel(0);
-	SendChannel(1);
-	SendChannel(2);
-	SendChannel(3);
-	SendChannel(4);
-	SendChannel(5);
-
+	for(let i = 0; i <= ChannelArray.length; i++) {
+		SendChannel(i);
+	}
 }
 
 export function Validate(endpoint) {
